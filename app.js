@@ -40,6 +40,10 @@ app.get('/curriculo', (req, res, next) => {
     });
 });
 
+app.get('/cdown', (req, res) => {
+    res.download('./files/curriculo.pdf', 'Curriculo - André Romeu Pedruzzi.pdf');
+})
+
 app.listen(port, () => {
     console.log(`servidor rodando http://localhost:${port}`);
 });
